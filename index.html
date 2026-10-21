@@ -6,7 +6,7 @@
     <title>Unity Web Player | CTSoundManager_Check</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-  </head>
+  <style>html,body{height:100%;background:#000;overflow:hidden}#unity-container.unity-desktop{position:absolute;left:0;top:0;width:100%;height:100%;transform:none}#unity-canvas.unity-fit{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(100vw,calc(100vh*16/9));height:min(100vh,calc(100vw*9/16))}#unity-footer{position:absolute;right:0;bottom:0}#unity-logo-title-footer,#unity-build-title{display:none}</style></head>
   <body>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=1280 height=720 tabindex="-1"></canvas>
@@ -104,8 +104,7 @@
 
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "1280px";
-        canvas.style.height = "720px";
+        canvas.className = "unity-fit";
       }
 
       document.querySelector("#unity-loading-bar").style.display = "block";
